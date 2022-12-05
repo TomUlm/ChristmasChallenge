@@ -23,7 +23,7 @@ public class SortAdresses {
 
         //TODO: sort addresses by city
         addresses.stream()
-                .sorted((o1, o2) -> o1.getCity().compareTo(o2.getCity()))
+                .sorted(Comparator.comparing(Address::getCity))
                 .forEach(System.out::println);
     }
 
